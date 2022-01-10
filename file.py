@@ -1,6 +1,6 @@
 from collections import Counter
 import csv
-from os import read
+
 
 def mean(total_weight, total_entries):
     mean = total_weight / total_entries
@@ -61,7 +61,7 @@ def mode(data):
     mode = float((mode_range[0] + mode_range[1]) / 2)
     print(f"Mode is -> {mode:2f}")
 
-with open('impStuff.csv') as f:
+with open('Ihatelife.csv',newline = '') as f:
     reader = csv.reader(f)
     data_files = list(reader)
 
@@ -70,10 +70,10 @@ data_files.pop(0)
 weight = 0
 entries = len(data_files)
 sorted_data = []
-
-for person_data in data_files:
-    weight += float(person_data[2])
-    sorted_data.append(float(person_data[2]))
+print(data_files[0][2])
+for i in data_files:
+    weight += float(data_files[i][2])
+    sorted_data.append(float(data_files[i][2]))
 
 sorted_data.sort()
 
