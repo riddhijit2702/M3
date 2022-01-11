@@ -10,11 +10,11 @@ def mean(total_weight, total_entries):
 def median(entries,data):
     if entries % 2 == 0:
         median1 = float(data[entries//2])
-        median2 = float(data[data//2 - 1])
+        median2 = float(data[entries//2 - 1])
         median = (median1 + median2) / 2
     else:
         median = float(data[entries//2])
-        print(f"Median is -> {median:2f}")
+    print(f"Median is -> {median:2f}")
 
 def mode(data):
     data = Counter(data)
@@ -61,7 +61,7 @@ def mode(data):
     mode = float((mode_range[0] + mode_range[1]) / 2)
     print(f"Mode is -> {mode:2f}")
 
-with open('Ihatelife.csv',newline = '') as f:
+with open('impStuff.csv',newline = '') as f:
     reader = csv.reader(f)
     data_files = list(reader)
 
